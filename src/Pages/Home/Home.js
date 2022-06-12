@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import Titulo from '../../Components/Titulo';
 import { users } from '../../Data/data'
 import Bars from '../Graphics/Bars/Bars';
 import LineGraph from '../Graphics/Line/LineGraph';
@@ -58,22 +59,25 @@ const Home = () => {
 
 
     return (
-        <div className={`${styles.grafico}`}>
-            {dados &&
-                <>
-                    < Bars
-                        chartData={dados}
-                    />
-                    <hr />
-                    <Pie chartData={dados} />
-                    <hr/>
-                    <LineGraph chartData={dados}/>
+        <>
+<Titulo titulo={'Primeiro deploy'}/>
+            <div className={`${styles.grafico}`}>
+                {dados &&
+                    <>
+                        < Bars
+                            chartData={dados}
+                        />
+                        <hr />
+                        <Pie chartData={dados} />
+                        <hr />
+                        <LineGraph chartData={dados} />
 
-                </>
+                    </>
 
-            }
-            {/* {JSON.stringify(userData, null)} */}
-        </div>
+                }
+                {/* {JSON.stringify(userData, null)} */}
+            </div>
+        </>
     )
 }
 

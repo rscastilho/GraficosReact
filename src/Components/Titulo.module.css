@@ -1,0 +1,7 @@
+.titulo{
+    background-color: rgb(119, 97, 97);
+    padding: 15px;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 10px;
+}
